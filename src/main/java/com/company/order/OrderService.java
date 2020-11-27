@@ -23,8 +23,10 @@ public class OrderService {
 
     @Autowired
     private OrderRepository orderRepository;
+
     @Autowired
     private UserRepository userRepository;
+
     @Autowired
     private ProductRepository productRepository;
 
@@ -51,7 +53,6 @@ public class OrderService {
 
     public Order addOrder(String rawBody) {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
-        System.out.print(rawBody);
         JSONObject jsonObject = new JSONObject(rawBody);
         Long productId = Long.parseLong(jsonObject.getString("productId"));
 

@@ -51,3 +51,17 @@ if the appropriate java is on the system path, then run:
 ````bash
 java -jar %pathToJar% >> %outputPath%
 ````
+
+## Running unit tests
+Use IDE features or run Gradle command:
+````bash
+gradlew test
+````
+## Manual testing
+
+1) Run database
+2) Run application
+3) Import Postman collection and environment into Postman from /postman folder.
+Application creates user "admin" on startup with password "admin123!". Use this user for creating new regular users.
+As regular user, create new orders. Initially all new orders have status of "NEW".
+Aplication proccesses all new orders automatically in every 3 seconds and changes orders status to "COMPLETED".
