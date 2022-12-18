@@ -1,6 +1,7 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.4.0'
+    id 'org.springframework.boot' version '2.7.6'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
 apply plugin: 'java'
@@ -16,17 +17,17 @@ repositories {
 }
 
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-data-rest'
-    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
-    compile 'org.springframework.boot:spring-boot-starter-security'
-    compile 'org.springframework.security:spring-security-test'
-    compile 'javax.validation:validation-api:2.0.1.Final'
-    compile 'org.hibernate:hibernate-validator:6.1.6.Final'
-    compile 'org.hibernate:hibernate-validator-annotation-processor:6.1.6.Final'
-    compile 'org.json:json:20201115'
+    implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.security:spring-security-test'
+    implementation 'javax.validation:validation-api:2.0.1.Final'
+    implementation 'org.hibernate:hibernate-validator:6.1.6.Final'
+    implementation 'org.hibernate:hibernate-validator-annotation-processor:6.1.6.Final'
+    implementation 'org.json:json:20201115'
     runtimeOnly('org.postgresql:postgresql')
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
 }
 
 
